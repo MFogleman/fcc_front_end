@@ -1,0 +1,268 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+body {
+    background: #1C2629;
+    /*background: radial-gradient(circle at center, #000000, #2B3A40);*/
+    color: #cccccc;
+    font-size: 20;
+    font-family: 'Lora', serif;
+    z-index: -20;
+}
+
+#full-size {
+    background: #1C2629;
+    /*background: radial-gradient(circle at center, #000000, #2B3A40);*/
+    color: #cccccc;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /* or overflow:auto; if you want scrollbars */
+}
+
+.bgBox {
+    background-color: #4E327A;
+    background: radial-gradient(circle at center, #4E327A, #000000, );
+    width: 90%;
+    height: 90%;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 10px, 10px, 5px, #888888;
+    vertical-align: middle;
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 41px 9px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 41px 9px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 75px 9px rgba(0, 0, 0, 1);
+    overflow: hidden;
+}
+
+.content {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    font-size: 38px;
+    width: 90%;
+    right: 5%;
+}
+
+#slideout_inner {
+    background-color: #DCE1E3;
+    color: black;
+    width: 300px;
+    height: 200px;
+    border-bottom-left-radius: 15px;
+    position: absolute;
+    top: -160px;
+    right: -250px;
+    overflow: hidden;
+    text-align: center;
+    -moz-transition: top 1s ease, right 1s ease;
+    -o-transition: top 1s ease, right 1s ease;
+    transition: top 1s ease, right 1s ease;
+    z-index: 100;
+}
+
+#slideout_inner.show {
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+    -moz-transition: top 1s ease, right 1s ease;
+    -o-transition: top 1s ease, right 1s ease;
+    transition: top 1s ease, right 1s ease;
+}
+
+.words {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.fa-cogs {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.fa-arrow-up {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+#weatherType {
+    text-transform: capitalize;
+}
+
+a {
+    color: black;
+}
+
+.graphicBox {
+    height: 120px;
+    width: 190px;
+    left: -20%;
+    color: white;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    -moz-transition: left 2s ease;
+    -o-transition: left 2s ease;
+    transition: left 2s ease
+}
+
+.graphicBoxEnd {
+    overflow: hidden;
+    left: 44%;
+    -moz-transition: left 2s ease;
+    -o-transition: left 2s ease;
+    transition: left 2s ease;
+}
+
+#cloud1 {
+    position: absolute;
+    font-size: 85px;
+    z-index: 4;
+    left: 55px;
+}
+
+.fa-bolt {
+    color: yellow;
+    position: absolute;
+    transform: rotate(7deg);
+    top: 65px;
+    z-index: -1;
+    font-size: 45px;
+    animation: flash 1s steps(5, start) infinite;
+    animation-iteration-count: infinite;
+    left: 60px;
+}
+
+@keyframes flash {
+    to {
+        visibility: hidden
+    }
+}
+
+#bolt2 {
+    left: 85px;
+}
+
+#bolt3 {
+    left: 110px;
+}
+
+.fa.fa-tint {
+    font-size: 15px;
+    transform: rotate(15deg);
+    position: absolute;
+    color: #38698A;
+    z-index: -5;
+}
+
+#drop1 {
+    top: 75px;
+    left: 65px;
+}
+
+#drop2 {
+    top: 75px;
+    left: 85px;
+}
+
+#drop3 {
+    top: 75px;
+    left: 105px;
+}
+
+#drop4 {
+    top: 100px;
+    left: 55px;
+}
+
+#drop5 {
+    top: 100px;
+    left: 75px;
+}
+
+#drop6 {
+    top: 100px;
+    left: 95px;
+}
+
+.fa.fa-circle {
+    font-size: 9px;
+    position: absolute;
+}
+
+#snow1 {
+    top: 80px;
+    left: 60px;
+}
+
+#snow2 {
+    top: 80px;
+    left: 80px;
+}
+
+#snow3 {
+    top: 80px;
+    left: 100px;
+}
+
+#snow4 {
+    top: 80px;
+    left: 120px;
+}
+
+#snow5 {
+    top: 105px;
+    left: 50px;
+}
+
+#snow6 {
+    top: 105px;
+    left: 70px;
+}
+
+#snow7 {
+    top: 105px;
+    left: 90px;
+}
+
+#snow8 {
+    top: 105px;
+    left: 110px;
+}
+
+#sunCircle {
+    position: absolute;
+    color: yellow;
+    font-size: 60px;
+    top: 25px;
+}
+
+.fa.fa-sun-o {
+    position: absolute;
+    color: yellow;
+    font-size: 70px;
+    top: 5px;
+}

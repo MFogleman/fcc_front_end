@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #BA758C;
+}
+
+.menu {
+    display: block;
+    background-color: white;
+    margin: 0 auto;
+    padding: none;
+    padding-top: .5vmin;
+    margin-top: 3vmin;
+    width: 52.5vmin;
+    height: 12vmin;
+    margin-bottom: 5vmin;
+    text-align: center;
+    border-radius: 5.25vmin;
+    font-size: 3.5vmin;
+    line-height: 3.5vmin;
+    cursor: default;
+}
+
+.teamLetter {
+    border-radius: 5.25vmin;
+    position: relative;
+    font-size: 5.25vmin;
+    padding: 0% 2% 0% 2%;
+    transition: background-color .33s;
+}
+
+.selectedTeam {
+    border-radius: 5.25vmin;
+    position: relative;
+    font-size: 5.25vmin;
+    padding: 0% 2% 0% 2%;
+    transition: background-color .33s;
+    background-color: #477F91;
+}
+
+.X {
+    right: 15%;
+}
+
+.O {
+    left: 15%;
+}
+
+#easy {
+    margin-left: -5%;
+    margin-right: 10%;
+    transition: background-color .33s;
+}
+
+#hard {
+    margin-right: -5%;
+    margin-left: 10%;
+    transition: background-color .33s;
+}
+
+.options {
+    visibility: hidden;
+    border-radius: 0.7vmin;
+    padding: 2px;
+}
+
+.selectedDifficulty {
+    border-radius: 0.7vmin;
+    padding: 2px;
+    background-color: #477F91;
+}
+
+.board {
+    display: block;
+    text-align: center;
+    background-color: #BA758C;
+    margin: 0 auto;
+    width: 70vmin;
+    height: 70vmin;
+}
+
+.row {
+    display: inline-block;
+    width: 100%;
+    height: 21vmin;
+}
+
+.cell {
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    transition: background-color .33s;
+    text-align: center;
+    height: 100%;
+    width: 21vmin;
+    border: solid #BA758C 1.575vmin;
+    border-radius: 5.25vmin;
+    vertical-align: middle;
+    font-size: 15.75vmin;
+    cursor: default;
+}
+
+.cell:after {
+    content: "";
+}
+
+.jqHover {
+    background-color: #477F91;
+}
+
+
+/*# sourceMappingURL=mainstyle.css.map */

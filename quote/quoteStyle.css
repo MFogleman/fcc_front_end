@@ -1,0 +1,53 @@
+#centerWrap {
+  display: block;
+  width: 900px;
+  margin: 0 auto;
+  text-align: center; }
+
+#theButton {
+  font-family: 'Bree Serif';
+  color: black;
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+  border: solid black 0px;
+  width: 200px;
+  font-size: 32px;
+  background-color: #660000;
+  box-shadow: 3px 3px 0px 0px;
+  cursor: pointer; }
+
+#theButton:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(4px);
+  transform: translateX(2px); }
+
+#quoteBox {
+  width: 700px;
+  height: 250px;
+  border: solid black 4px;
+  margin: 0 auto;
+  margin-top: 32px;
+  box-shadow: 10px 10px 0px 0px;
+  font-size: 28px;
+  color: black;
+  font-family: 'Bree Serif';
+  padding: 15px; }
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 64px;
+  color: black; }
+
+h2 {
+  font-family: 'Bree Serif'; }
+
+#birdy {
+  font-family: 'Bree Serif';
+  font-size: 32px;
+  color: #00aced;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 15px; }
+
+/*# sourceMappingURL=mainstyle.css.map */

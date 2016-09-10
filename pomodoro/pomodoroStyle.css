@@ -1,0 +1,60 @@
+* {
+  font-family: 'Share Tech Mono', monospace; }
+
+body {
+  background-color: #255D30; }
+
+.redToGreen {
+  -webkit-animation: unRipen;
+  /* Chrome, Safari, Opera */
+  animation: unRipen;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; }
+
+@-webkit-keyframes ripen {
+  from {
+    background-color: #255D30; }
+  to {
+    background-color: #D93131; } }
+@keyframes ripen {
+  from {
+    background-color: #255D30; }
+  to {
+    background-color: #D93131; } }
+.greenToRed {
+  -webkit-animation: ripen;
+  /* Chrome, Safari, Opera */
+  animation: ripen;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; }
+
+@-webkit-keyframes unRipen {
+  from {
+    background-color: #D93131; }
+  to {
+    background-color: #255D30; } }
+@keyframes unRipen {
+  from {
+    background-color: #D93131; }
+  to {
+    background-color: #255D30; } }
+#setup {
+  font-size: 48px;
+  width: 550px;
+  text-align: center; }
+
+#timer {
+  margin-top: 500px;
+  text-align: center;
+  width: 900px;
+  margin: 0 auto;
+  font-size: 256px; }
+
+#onOff {
+  width: 150px;
+  margin: 0 auto; }
+
+.buttons, #onOff {
+  cursor: pointer; }
+
+/*# sourceMappingURL=mainstyle.css.map */

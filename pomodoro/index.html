@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Pomodoro</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Pomodoro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.MFogleman.com" />
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="pomodoroStyle.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+    <script src="pomodoroScript.js"></script>
+</head>
+
+<body>
+<div id="setup">
+    <div class="work">
+        Work: <span id="workSpan">25:00</span> <span class="buttons" id="workButtons"><span id="workAdd">+</span> <span id="workSub">-</span></span>
+    </div>
+    <div class="rest">
+        Rest: <span id="restSpan">05:00</span> <span class="buttons" id="restButtons"><span id="restAdd">+</span> <span id="restSub">-</span></span>
+    </div>
+    <div id="onOff">Start!</div>
+</div>
+
+<div id="timer">25:00</div>
+</body>
+
+</html>

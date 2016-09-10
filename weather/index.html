@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Weather app!</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="weatherStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+    <div id="full-size">
+        <div class="bgBox">
+            <div id="slideout_inner">
+                <ul style="list-style-type:none; padding:none; margin:none;">
+                    <li><a href="#" onClick="convert()" id="convertText">Convert to Celsius</a></li>
+                    <br>
+                    <li id="changeLocLine"><a href="#" onclick="openZipForm()">Change Location</a></li>
+                    <br>
+                </ul>
+                <i class="fa fa-cogs" onclick="toggleSlide()" id="cornerIcon"></i>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="content">
+                <div>
+                    <span id="weatherType">Loading Weather...</span> <span id="weatherTemp"></span>
+                    <div class="graphicBox" id="graphicBoxId">
+                    </div>
+                    <div id="cityName"></div>
+                </div>
+            </div>
+        </div>
+        <script src="weatherScripts.js">
+        </script>
+</body>
+
+</html>
