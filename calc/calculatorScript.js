@@ -1,9 +1,10 @@
 "use strict";
+
 var num1 = "0";
 var num2 = "0";
 var operator1 = undefined;
 var display = document.getElementById("display");
-var key =[];// Array.from(document.getElementsByClassName("key"));
+var key =[];
 var keyRouter = {
     "digit"     : digitPressed,
     "operator"  : operatorPressed,
@@ -12,6 +13,7 @@ var keyRouter = {
     "dot"       : dotPressed,
     "back"      : backPressed
 };
+
 for (var i = 0; i< document.getElementsByClassName("key").length; i+=1){
     key.push(document.getElementsByClassName("key")[i]);
 }
@@ -21,7 +23,6 @@ printNumber(num1); //replace "Loading..." with "0"
 key.forEach(function(element){
     return element.addEventListener("click", keyClicked);
 });
-
 
 function keyClicked() { 
 
@@ -34,6 +35,11 @@ function keyClicked() {
 }
 
 function digitPressed(keyId){
+    if (!num1){         //if num1 doesnt exist, we just had operator pressed
+        num1 = keyId;   //so make num1 our new keyId
+        return printNumber(num1);
+    }
+
     if (num1.length < 10){  //keep display window from overflowing
         if (num1 != "0"){   //replace 0 if it exists with user input
             num1 += keyId;
@@ -49,8 +55,8 @@ function operatorPressed(keyId){
         num1 = doMath(num1, operator1, num2).toString(); //do math as we chain
         printNumber(num1);
     }
-    num2 = num1 || num2;  //if num1 != 0 push its value to num2.
-    num1 = "0";
+    num2 = num1 || num2;  //if num1 != 0 or undefined push its value to num2.
+    num1 = undefined;    //prevents bugs when hitting operator keys twice
     return operator1 = keyId;
 }
 
