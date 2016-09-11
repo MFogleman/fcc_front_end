@@ -78,7 +78,11 @@ function clearPressed(){
 }
 
 function backPressed(){
-    num1 = num1.slice(0, -1);
+    if (num1.length == 1){  //if we try to delete last digit
+        num1 = "0";         //make it "0"
+    }else{
+        num1 = num1.slice(0, -1) || 0;
+    }
     printNumber(num1);
 }
 
@@ -96,6 +100,9 @@ function dotPressed(){
 }
 
 function printNumber(number){
+    // if (!number){
+    //  return display.textContent = "0";
+    // }
     return display.textContent = number.toString(); 
 } 
 
