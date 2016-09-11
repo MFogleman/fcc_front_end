@@ -13,13 +13,13 @@ var keyRouter = {
     "back"      : backPressed
 };
 for (var i = 0; i< document.getElementsByClassName("key").length; i+=1){
-    key.push(document.getElementsByClassName("key")[i])
+    key.push(document.getElementsByClassName("key")[i]);
 }
 
 printNumber(num1); //replace "Loading..." with "0"
 
 key.forEach(function(element){
-     return element.addEventListener("click", keyClicked);
+    return element.addEventListener("click", keyClicked);
 });
 
 
