@@ -1,0 +1,84 @@
+$calcwidth:58.116vmin;
+$calcheight: $calcwidth*1.2612;
+$factor: .10471204vmin;
+
+/*
+Was not originally designed responsive
+Calculators-width adjusts by viewport,
+height adjusts relative to width
+Factor divided pixel size will give proper
+pixel size
+*/
+* {
+    
+    font-family: monospace;
+}
+
+.calc {
+    background-color: #4B4B4E;
+    width: $calcwidth;
+    height: $calcheight;
+    padding: $factor * 20;
+    list-style: none;
+    margin: 0 auto;
+    border-radius: $factor * 20;
+    box-shadow: 4px 2px black;
+}
+
+#display {
+    background-color: #546F4F;
+    text-align: right;
+    font-size: $factor * 72;
+    margin-top: $factor * 30;
+    margin-left: $factor * 10;
+    margin-right: $factor * 10;
+    padding-left: $factor * 20;
+    padding-right: $factor * 20;
+    border-radius: $factor * 10;
+    margin-bottom: $factor * 30;
+    box-shadow: inset $factor * 3 $factor * 3 black;
+}
+
+.key {
+    display: inline-block;
+    background-color: #F9FBFB;
+    text-align: center;
+    width: 20%;
+    border-radius: $factor * 15;
+    font-size: $factor * 64;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-shadow: $factor*5 $factor*5 $factor*0 $factor*4 #3E3D3D;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li.key:hover {
+    cursor: pointer;
+}
+
+.key:active {
+    box-shadow: $factor * 2 $factor * 2 $factor * 0 $factor * 1 #222222;
+    transform: translate($factor*3, $factor*3);
+}
+
+#equals {
+    color: white;
+    background-color: #B58047;
+}
+
+.top {
+    background-color: #8E2222;
+}
+
+.hide {
+    display: hidden;
+    cursor: none;
+    box-shadow: none;
+}
