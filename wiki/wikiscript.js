@@ -22,7 +22,7 @@ function init() {
             action = query - Because we arent searching
 
             generator = random - At one point these were called lists instead of
-            generators, I think.  Theres a bunch of other keys you can use with
+            generators, I think.  Theres a bunch of other keys you can use withB
             'random' that give results that you arent working for
 
             grnnamespace=0 - 0 is the namespace for actual articles, so you dont
