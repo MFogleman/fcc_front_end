@@ -53,10 +53,11 @@ body {
 .content {
     display: inline-block;
     text-align: center;
-    position: absolute;
+    position: relative;
     font-size: 38px;
     width: 90%;
-    right: 5%;
+    /* right: 5%; */
+    margin: 0 auto;
 }
 
 #slideout_inner {
@@ -119,22 +120,24 @@ a {
 .graphicBox {
     height: 120px;
     width: 190px;
-    left: -20%;
+    /* left: -20%; */
     color: white;
     position: relative;
     z-index: 1;
     overflow: hidden;
     -moz-transition: left 2s ease;
     -o-transition: left 2s ease;
-    transition: left 2s ease
+    transition: left 2s ease;
 }
 
 .graphicBoxEnd {
     overflow: hidden;
-    left: 44%;
+    position: relative;
+    left: auto;
     -moz-transition: left 2s ease;
     -o-transition: left 2s ease;
     transition: left 2s ease;
+    margin: 0 auto;
 }
 
 #cloud1 {

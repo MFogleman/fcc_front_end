@@ -1,4 +1,3 @@
-//TODO go back and clean up the code.  Lots of things that can be made into functions
 var workMin = 25;
 var workSec = 0;
 var holdWork;
@@ -17,7 +16,6 @@ $(document).ready(function(){
 
 });
 
-
 function settings(){
     $("#onOff").click(function(){
         if (paused){ //start the timer / unpausing
@@ -35,7 +33,9 @@ function settings(){
             clearInterval(tic);
         }
     });
-    
+    /*The rest of this function is used to adjust the
+    /*settings of the timer
+    /***********************************************/
     $("#workAdd").click(function(){
         if (paused && setWork < 99){
             workSec = 0;
@@ -146,69 +146,69 @@ function reset(){
 }
 
 function colorChange(){
-    
+    var element = document.getElementsByTagName("body")[0];
+
     if (paused == true){
-        $('body').css("animation-play-state", "paused");
-        $('body').css("-webkit-animation-play-state", "paused")
-        document.title = "Pomodoro - Paused"
+        $("body").css("animation-play-state", "paused");
+        $("body").css("-webkit-animation-play-state", "paused");
+        document.title = "Pomodoro - Paused";
     }
     else{
         if (mode == "work"){
             document.title = "Pomodoro - Work";
             
             if (holdWork == setWork){  //if we are unpausing the timer mid-countodwn, animation shouldnt change
-                $('.greenToRed').css("animation-play-state", "running");
-                $('.greenToRed').css("-webkit-animation-play-state", "running");
+                $(".greenToRed").css("animation-play-state", "running");
+                $(".greenToRed").css("-webkit-animation-play-state", "running");
             
             }
             else if (holdWork > workMin || setWork > holdWork){ //if we increased the work timer while paused, restart the animation with the new time from new beginning
                 //cant simply replace and readd class.  **TODO stress test
-                var element = document.getElementsByTagName("body")[0];
+                // var element = document.getElementsByTagName("body")[0];
                 element.preventDefault;
                 element.classList.remove("greenToRed");             
                 void element.offsetWidth;
                 element.classList.add("greenToRed");                            
-                $('.greenToRed').css("animation-duration", (setWork*60)+2 + "s");
-                $('.greenToRed').css("-webkit-animation-duration", (setWork*60)+2 + "s");
-                $('.greenToRed').css("animation-play-state", "running");
-                $('.greenToRed').css("-webkit-animation-play-state", "running");
+                $(".greenToRed").css("animation-duration", (setWork*60)+2 + "s");
+                $(".greenToRed").css("-webkit-animation-duration", (setWork*60)+2 + "s");
+                $(".greenToRed").css("animation-play-state", "running");
+                $(".greenToRed").css("-webkit-animation-play-state", "running");
             }
             else{  //if we are starting the initial animation
-                $('body').removeClass("redToGreen");
-                $('body').addClass("greenToRed");
+                $("body").removeClass("redToGreen");
+                $("body").addClass("greenToRed");
                 
-                $('.greenToRed').css("animation-duration", (setWork*60)+2 + "s");
-                $('.greenToRed').css("-webkit-animation-duration", (setWork*60)+2 + "s");
-                $('.greenToRed').css("animation-play-state", "running");
-                $('.greenToRed').css("-webkit-animation-play-state", "running");
+                $(".greenToRed").css("animation-duration", (setWork*60)+2 + "s");
+                $(".greenToRed").css("-webkit-animation-duration", (setWork*60)+2 + "s");
+                $(".greenToRed").css("animation-play-state", "running");
+                $(".greenToRed").css("-webkit-animation-play-state", "running");
             }
         }
         if (mode == "rest"){
             document.title = "Pomodoro - Rest";
             
             if (holdRest == setRest){ //if unpausing timer mid-countdown, no animation change.
-                $('.redToGreen').css("animation-play-state", "running");
-                $('.redToGreen').css("-webkit-animation-play-state", "running");                
+                $(".redToGreen").css("animation-play-state", "running");
+                $(".redToGreen").css("-webkit-animation-play-state", "running");                
             }
             else if (holdRest > restMin || setRest > holdRest){
-                //cant simply replace and readd class.  **TODO stress test
-                var element = document.getElementsByTagName("body")[0];
+                //cant simply replace and readd class.  
                 element.preventDefault;
                 element.classList.remove("redToGreen");             
                 void element.offsetWidth;
                 element.classList.add("redToGreen");                            
-                $('.redToGreen').css("animation-duration", (setRest*60)+2 + "s");
-                $('.redToGreen').css("-webkit-animation-duration", (setRest*60)+2 + "s");
-                $('.redToGreen').css("animation-play-state", "running");
-                $('.redToGreen').css("-webkit-animation-play-state", "running");
+                $(".redToGreen").css("animation-duration", (setRest*60)+2 + "s");
+                $(".redToGreen").css("-webkit-animation-duration", (setRest*60)+2 + "s");
+                $(".redToGreen").css("animation-play-state", "running");
+                $(".redToGreen").css("-webkit-animation-play-state", "running");
             }
             else{ //initial proper animation;
-                $('body').removeClass("greenToRed");
-                $('body').addClass("redToGreen");
-                $('.redToGreen').css("animation-duration", (setRest*60)+2 + "s");
-                $('.redToGreen').css("-webkit-animation-duration", (setRest*60)+2 + "s");
-                $('.redToGreen').css("animation-play-state", "running");
-                $('.redToGreen').css("-webkit-animation-play-state", "running");
+                $("body").removeClass("greenToRed");
+                $("body").addClass("redToGreen");
+                $(".redToGreen").css("animation-duration", (setRest*60)+2 + "s");
+                $(".redToGreen").css("-webkit-animation-duration", (setRest*60)+2 + "s");
+                $(".redToGreen").css("animation-play-state", "running");
+                $(".redToGreen").css("-webkit-animation-play-state", "running");
             }
         }
     }
